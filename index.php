@@ -9,13 +9,13 @@ $mail = new PHPMailer;
                        
 //$mail->SMTPDebug = 3;                 // Habilita modo debug na saída
 $mail->isSMTP();                        // Setar o uso do SMTP
-$mail->Host = 'email-ssl.com.br';  	// Servidor smtp 
+$mail->Host = 'smtp.dominio.com.br';  	// Servidor smtp 
 $mail->SMTPAuth = true;                 // Habilita a autenticação do form
-$mail->Username = 'email@support.tecnologia.ws';       // Conta de e-mail que realizará o envio
-$mail->Password = 'Locaweb@102030';       // Senha da conta de e-mail
+$mail->Username = 'email@email.com.br';       // Conta de e-mail que realizará o envio
+$mail->Password = 'senha@senha';       // Senha da conta de e-mail
 //$mail->SMTPSecure = 'tls';            // Habilitar uso do TLS (plesk 11.5 ou utilizando contas do Gmail)
 $mail->Port = 587;                       // Porta de conexão 
-$mail->From = 'email@support.tecnologia.ws'; 			// e-mail From deve ser o mesmo de "username" (contadeEmail)
+$mail->From = 'email@email.com.br'; 			// e-mail From deve ser o mesmo de "username" (contadeEmail)
 $mail->FromName = 'Teste'; 				// Nome que será exibido ao receber a mensagem. 
 $mail->addAddress('e-mail que recebera o teste', 'nome destinatario'); // Destinatário 
 //$mail->addAddress('ellen@example.com');               	// Nome do destinatário
@@ -28,14 +28,14 @@ $mail->addAddress('e-mail que recebera o teste', 'nome destinatario'); // Destin
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Envio autenticado - mesmo from';  //Assunto da Mensagem
-$mail->Body    = 'Teste de formulario enviado por Jhonatan da Locaweb <b>Envio OK!</b>'; // Corpo da mensagem
+$mail->Body    = 'Teste de formulario enviado por Jhonatan da <b>Eveo</b> Envio <b>OK!</b>'; // Corpo da mensagem
 //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    echo 'Mensagem enviada com sucesso !';
+    echo 'Mensagem enviada com sucesso!/r/n Verifique sua caixa postal';
 }
 
 ?>
