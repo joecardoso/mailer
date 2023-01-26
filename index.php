@@ -35,7 +35,7 @@ if(!$mail->send()) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    echo 'Mensagem enviada com sucesso!/r/n Verifique sua caixa postal';
+    echo nl2br ("Mensagem enviada com sucesso! \n Verifique a conta sua caixa postal, <b>não se esqueça de validar o SPAM</b>");
 }
 
 ?>
